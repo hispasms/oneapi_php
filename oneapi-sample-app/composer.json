@@ -1,0 +1,5 @@
+{
+    "require": {
+            "hispasms/oneapi": "dev-master"
+    }
+}
