@@ -1,8 +1,8 @@
 <?php
 
-namespace hispasms\models;
+namespace hispaSMS\models;
 
-use hispasms\Models;
+use hispaSMS\Models;
 
 class MoSubscription extends AbstractObject {
 
@@ -22,6 +22,6 @@ class MoSubscription extends AbstractObject {
 
 }
 
-Models::register('hispasms\models\MoSubscription');
+Models::register('hispaSMS\models\MoSubscription');
 
 ?>

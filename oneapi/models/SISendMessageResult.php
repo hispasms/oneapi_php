@@ -1,7 +1,7 @@
 <?php
 
-namespace hispasms\models;
-use hispasms\Models;
+namespace hispaSMS\models;
+use hispaSMS\Models;
 
 /**
  * Send message response (Social Invite) object.
@@ -17,6 +17,6 @@ class SISendMessageResult extends AbstractObject {
   }
 }
 
-Models::register('hispasms\models\SISendMessageResult');
+Models::register('hispaSMS\models\SISendMessageResult');
 
 ?>

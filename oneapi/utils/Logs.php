@@ -6,7 +6,7 @@
  * Time: 11:21
  */
 
-namespace hispasms\utils;
+namespace hispaSMS\utils;
 
 
 use Exception;

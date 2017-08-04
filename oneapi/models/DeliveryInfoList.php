@@ -1,8 +1,8 @@
 <?php
 
-namespace hispasms\models;
-use hispasms\Models;
-use hispasms\ObjectArrayConversionRule;
+namespace hispaSMS\models;
+use hispaSMS\Models;
+use hispaSMS\ObjectArrayConversionRule;
 
 /**
  * The delivery status of an message.
@@ -18,7 +18,7 @@ class DeliveryInfoList extends AbstractObject {
 }
 
 Models::register(
-    'hispasms\models\DeliveryInfoList',
-    new ObjectArrayConversionRule('hispasms\models\DeliveryInfo', 'deliveryInfo', 'deliveryInfoList.deliveryInfo')
+    'hispaSMS\models\DeliveryInfoList',
+    new ObjectArrayConversionRule('hispaSMS\models\DeliveryInfo', 'deliveryInfo', 'deliveryInfoList.deliveryInfo')
 );
 

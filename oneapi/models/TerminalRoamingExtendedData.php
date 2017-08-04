@@ -1,8 +1,8 @@
 <?php
 
-namespace hispasms\models;
+namespace hispaSMS\models;
 
-use hispasms\Models;
+use hispaSMS\Models;
 
 class TerminalRoamingExtendedData extends AbstractObject {
 
@@ -33,5 +33,5 @@ class TerminalRoamingExtendedData extends AbstractObject {
 
 }
 
-Models::register('hispasms\models\TerminalRoamingExtendedData');
+Models::register('hispaSMS\models\TerminalRoamingExtendedData');
 

@@ -6,9 +6,9 @@
  * Time: 12:26
  */
 
-namespace hispasms;
+namespace hispaSMS;
 
-use hispasms\utils\Utils;
+use hispaSMS\utils\Utils;
 
 class SubFieldConversionRule extends ObjectConversionRule {
 

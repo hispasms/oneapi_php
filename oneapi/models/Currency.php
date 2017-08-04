@@ -1,8 +1,8 @@
 <?php
 
-namespace hispasms\models;
+namespace hispaSMS\models;
 
-use hispasms\Models;
+use hispaSMS\Models;
 
 class Currency extends AbstractObject {
 
@@ -16,4 +16,4 @@ class Currency extends AbstractObject {
 
 }
 
-Models::register('hispasms\models\Currency');
+Models::register('hispaSMS\models\Currency');

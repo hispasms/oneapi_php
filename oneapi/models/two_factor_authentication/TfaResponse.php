@@ -1,9 +1,9 @@
 <?php
 
-namespace hispasms\models\two_factor_authentication;
+namespace hispaSMS\models\two_factor_authentication;
 
-use hispasms\Models;
-use hispasms\models\AbstractObject;
+use hispaSMS\Models;
+use hispaSMS\models\AbstractObject;
 
 class TfaResponse extends AbstractObject {
 
@@ -19,6 +19,6 @@ class TfaResponse extends AbstractObject {
 
 }
 
-Models::register('hispasms\models\two_factor_authentication\TfaResponse');
+Models::register('hispaSMS\models\two_factor_authentication\TfaResponse');
 
 ?>

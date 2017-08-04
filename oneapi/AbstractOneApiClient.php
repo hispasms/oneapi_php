@@ -6,15 +6,15 @@
  * Time: 12:22 PM
  */
 
-namespace hispasms;
+namespace hispaSMS;
 
 
 use Exception;
-use hispasms\utils\Logs;
-use hispasms\utils\Utils;
+use hispaSMS\utils\Logs;
+use hispaSMS\utils\Utils;
 
 if(!defined('ONEAPI_BASE_URL'))
-    define('ONEAPI_BASE_URL', 'https://oneapi.hispasms.com');
+    define('ONEAPI_BASE_URL', 'http://oneapi.hispasms.com');
 
 class AbstractOneApiClient {
 
@@ -53,7 +53,7 @@ class AbstractOneApiClient {
     }
 
     public function login() {
-        $restPath = '/restapi/1/customerProfile/login';
+        $restPath = '/1/customerProfile/login';
 
         list($isSuccess, $content) = $this->executePOST(
             $this->getRestUrl($restPath), Array(
@@ -66,7 +66,7 @@ class AbstractOneApiClient {
     }
 
     protected function fillOneApiAuthentication($content, $isSuccess) {
-        $this->oneApiAuthentication = Conversions::createFromJSON('\hispasms\models\OneApiAuthentication', $content, !$isSuccess);
+        $this->oneApiAuthentication = Conversions::createFromJSON('\hispaSMS\models\OneApiAuthentication', $content, !$isSuccess);
         $this->oneApiAuthentication->username = $this->username;
         $this->oneApiAuthentication->password = $this->password;
         $this->oneApiAuthentication->authenticated = @strlen($this->oneApiAuthentication->ibssoToken) > 0;
@@ -81,7 +81,7 @@ class AbstractOneApiClient {
      * Check if the authorization (username/password) is valid.
      */
     public function isValid() {
-        $restUrl = $this->getRestUrl('/restapi/1/customerProfile');
+        $restUrl = $this->getRestUrl('/1/customerProfile');
 
         list($isSuccess, $content) = $this->executeGET($restUrl);
 
@@ -293,7 +293,7 @@ class AbstractOneApiClient {
             throw new Exception($message);
         }
 
-        if ('hispasms\models\iam\IamException' == $className) {
+        if ('hispaSMS\models\iam\IamException' == $className) {
             $message = json_encode($result->requestError);
             throw new Exception($message);
         }

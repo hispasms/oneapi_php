@@ -1,10 +1,10 @@
 <?php
 
-namespace hispasms\models;
+namespace hispaSMS\models;
 
-use hispasms\Models;
-use hispasms\ObjectConversionRule;
-use hispasms\utils\Utils;
+use hispaSMS\Models;
+use hispaSMS\ObjectConversionRule;
+use hispaSMS\utils\Utils;
 
 class SmsException extends AbstractObject {
 
@@ -31,6 +31,6 @@ function __convert_sms_exception_from_json($object, $json) {
 }
 
 Models::register(
-        'hispasms\models\SmsException',
-        new ObjectConversionRule('hispasms\models\__convert_sms_exception_from_json')
+        'hispaSMS\models\SmsException',
+        new ObjectConversionRule('hispaSMS\models\__convert_sms_exception_from_json')
 );

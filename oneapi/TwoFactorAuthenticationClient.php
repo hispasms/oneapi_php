@@ -6,11 +6,11 @@
  * Time: 12:30 PM
  */
 
-namespace hispasms;
+namespace hispaSMS;
 
 class TwoFactorAuthenticationClient extends AbstractOneApiClient {
 
-    public function __construct($username = null, $password = null, $baseUrl = "https://oneapi-test.hispasms.com/") {
+    public function __construct($username = null, $password = null, $baseUrl = "http://oneapi-test.hispasms.com/") {
         parent::__construct($username, $password, $baseUrl);
     }
 
@@ -18,7 +18,7 @@ class TwoFactorAuthenticationClient extends AbstractOneApiClient {
      * Generate Api Key
      */
     public function generateApiKey() {
-        $restUrl = $this->getRestUrl('/restapi/2fa/1/api-key');
+        $restUrl = $this->getRestUrl('/2fa/1/api-key');
 
         list($isSuccess, $content) = $this->executePOST(
             $restUrl, null, 'application/json'
@@ -31,7 +31,7 @@ class TwoFactorAuthenticationClient extends AbstractOneApiClient {
      * Initiate Two Factor Authentication
      */
     public function authentication($authenticationRequest, $apiKey) {
-        $restUrl = $this->getRestUrl('/restapi/2fa/1/authentication');
+        $restUrl = $this->getRestUrl('/2fa/1/authentication');
 
         $params = array(
             'applicationId' => $authenticationRequest->applicationId,
@@ -44,14 +44,14 @@ class TwoFactorAuthenticationClient extends AbstractOneApiClient {
             $restUrl, $params, 'application/json', $apiKey
         );
 
-        return $this->createFromJSON($isSuccess ? 'hispasms\models\two_factor_authentication\TfaResponse' : 'hispasms\models\iam\IamException', $content, false);// !$isSuccess);
+        return $this->createFromJSON($isSuccess ? 'hispaSMS\models\two_factor_authentication\TfaResponse' : 'hispaSMS\models\iam\IamException', $content, false);// !$isSuccess);
     }
 
     /**
      * Verify phone number
      */
     public function verification($verificationRequest, $apiKey) {
-        $restUrl = $this->getRestUrl('/restapi/2fa/1/verification');
+        $restUrl = $this->getRestUrl('/2fa/1/verification');
 
         $params = array(
             'applicationId' => $verificationRequest->applicationId,
@@ -63,7 +63,7 @@ class TwoFactorAuthenticationClient extends AbstractOneApiClient {
             $restUrl, $params, 'application/json', $apiKey
         );
 
-        return $this->createFromJSON($isSuccess ? 'hispasms\models\two_factor_authentication\TfaVerifyPinResponse' : 'hispasms\models\iam\IamException', $content, false);// !$isSuccess);
+        return $this->createFromJSON($isSuccess ? 'hispaSMS\models\two_factor_authentication\TfaVerifyPinResponse' : 'hispaSMS\models\iam\IamException', $content, false);// !$isSuccess);
     }
 
     /**
@@ -71,7 +71,7 @@ class TwoFactorAuthenticationClient extends AbstractOneApiClient {
      */
     public function isVerified($isVerifiedRequest, $apiKey) {
         $restUrl = $this->getRestUrl(
-            '/restapi/2fa/1/applications/{appId}/phone-number/{phoneNumber}', Array(
+            '/2fa/1/applications/{appId}/phone-number/{phoneNumber}', Array(
                 'appId' => $isVerifiedRequest->applicationId,
                 'phoneNumber' => $isVerifiedRequest->phoneNumber
             )
@@ -81,7 +81,7 @@ class TwoFactorAuthenticationClient extends AbstractOneApiClient {
             $restUrl, null, 'application/json', $apiKey
         );
 
-        return $this->createFromJSON($isSuccess ? 'hispasms\models\two_factor_authentication\TfaIsVerifiedResponse' : 'hispasms\models\iam\IamException', $content, false);// !$isSuccess);
+        return $this->createFromJSON($isSuccess ? 'hispaSMS\models\two_factor_authentication\TfaIsVerifiedResponse' : 'hispaSMS\models\iam\IamException', $content, false);// !$isSuccess);
     }
 
     /**
@@ -89,7 +89,7 @@ class TwoFactorAuthenticationClient extends AbstractOneApiClient {
      */
     public function deliveryStatus($smsId, $apiKey) {
         $restUrl = $this->getRestUrl(
-            '/restapi/2fa/1/sms/{smsId}', Array(
+            '/2fa/1/sms/{smsId}', Array(
                 'smsId' => $smsId
             )
         );
@@ -98,7 +98,7 @@ class TwoFactorAuthenticationClient extends AbstractOneApiClient {
             $restUrl, null, 'application/json', $apiKey
         );
 
-        return $this->createFromJSON($isSuccess ? 'hispasms\models\two_factor_authentication\TfaDeliveryInfo' : 'hispasms\models\iam\IamException', $content, false);// !$isSuccess);
+        return $this->createFromJSON($isSuccess ? 'hispaSMS\models\two_factor_authentication\TfaDeliveryInfo' : 'hispaSMS\models\iam\IamException', $content, false);// !$isSuccess);
     }
 
 }

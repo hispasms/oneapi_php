@@ -1,8 +1,8 @@
 <?php
 
-namespace hispasms\models;
-use hispasms\Models;
-use hispasms\models\AbstractObject;
+namespace hispaSMS\models;
+use hispaSMS\Models;
+use hispaSMS\models\AbstractObject;
 
 
 /**
@@ -45,6 +45,6 @@ class SMSRequest extends AbstractObject
 
 }
 
-Models::register('hispasms\models\SMSRequest');
+Models::register('hispaSMS\models\SMSRequest');
 
 ?>

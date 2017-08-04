@@ -1,9 +1,9 @@
 <?php
 
-namespace hispasms\models;
+namespace hispaSMS\models;
 
 
-use hispasms\Models;
+use hispaSMS\Models;
 
 class Encoding  extends AbstractObject {
     public $name;
@@ -13,7 +13,7 @@ class Encoding  extends AbstractObject {
     }
 
 }    
-Models::register('hispasms\models\Encoding');
+Models::register('hispaSMS\models\Encoding');
 
 
 ?>

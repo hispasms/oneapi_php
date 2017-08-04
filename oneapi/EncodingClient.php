@@ -6,10 +6,10 @@
  * Time: 12:29 PM
  */
 
-namespace hispasms;
+namespace hispaSMS;
 
 
-use hispasms\models\Encodings;
+use hispaSMS\models\Encodings;
 
 class EncodingClient extends AbstractOneApiClient {
 
@@ -22,7 +22,7 @@ class EncodingClient extends AbstractOneApiClient {
      */
     // TODO(TK)
     public function getEncodings($id = null) {
-        $restUrl = $this->getRestUrl('/restapi/1/fileEncodings');
+        $restUrl = $this->getRestUrl('/1/fileEncodings');
         list($isSuccess, $content) = $this->executeGET($restUrl);
 
         return new Encodings($content, $isSuccess);

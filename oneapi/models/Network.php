@@ -1,9 +1,9 @@
 <?php
 
-namespace hispasms\models;
+namespace hispaSMS\models;
 
-use hispasms\Models;
-use hispasms\SubObjectConversionRule;
+use hispaSMS\Models;
+use hispaSMS\SubObjectConversionRule;
 
 class Network extends AbstractObject {
     public $id;
@@ -14,7 +14,7 @@ class Network extends AbstractObject {
     }
 }
 Models::register(
-    'hispasms\models\Network',
-    new SubObjectConversionRule('hispasms\models\Country', 'country')
+    'hispaSMS\models\Network',
+    new SubObjectConversionRule('hispaSMS\models\Country', 'country')
 );
 ?>

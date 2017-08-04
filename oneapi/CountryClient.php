@@ -6,10 +6,10 @@
  * Time: 12:27 PM
  */
 
-namespace hispasms;
+namespace hispaSMS;
 
 
-use hispasms\models\Countries;
+use hispaSMS\models\Countries;
 
 class CountryClient extends AbstractOneApiClient {
 
@@ -23,7 +23,7 @@ class CountryClient extends AbstractOneApiClient {
     // TODO(TK)
     public function getCountries($id = null) {
         $restUrl = $this->getRestUrl(
-            $id == null ? '/restapi/1/countries' : '/restapi/1/countries/{id}', Array('id' => $id)
+            $id == null ? '/1/countries' : '/1/countries/{id}', Array('id' => $id)
         );
         list($isSuccess, $content) = $this->executeGET($restUrl);
 

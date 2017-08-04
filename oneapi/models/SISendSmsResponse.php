@@ -1,10 +1,10 @@
 <?php
 
-namespace hispasms\models;
+namespace hispaSMS\models;
 
 // require_once('SISendMessageResult');
-use hispasms\Models;
-use hispasms\ObjectArrayConversionRule;
+use hispaSMS\Models;
+use hispaSMS\ObjectArrayConversionRule;
 
 /**
  * Send sms response (Social Invite) object.
@@ -20,8 +20,8 @@ class SISendSmsResponse extends AbstractObject {
   }
 }
 
-Models::register('hispasms\models\SISendSmsResponse', array (
-  new ObjectArrayConversionRule('hispasms\models\SISendMessageResult', 'responses')
+Models::register('hispaSMS\models\SISendSmsResponse', array (
+  new ObjectArrayConversionRule('hispaSMS\models\SISendMessageResult', 'responses')
 ));
 
 ?>

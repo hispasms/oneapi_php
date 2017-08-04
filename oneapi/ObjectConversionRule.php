@@ -6,7 +6,7 @@
  * Time: 12:22
  */
 
-namespace hispasms;
+namespace hispaSMS;
 
 class ObjectConversionRule {
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace hispasms\models;
+namespace hispaSMS\models;
 
-use hispasms\Models;
+use hispaSMS\Models;
 
 class HlrSendResult extends AbstractObject {
 
@@ -16,6 +16,6 @@ class HlrSendResult extends AbstractObject {
 
 }
 
-Models::register('hispasms\models\HlrSendResult');
+Models::register('hispaSMS\models\HlrSendResult');
 
 ?>

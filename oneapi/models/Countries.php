@@ -1,9 +1,9 @@
 <?php
 
-namespace hispasms\models;
+namespace hispaSMS\models;
 
-use hispasms\Models;
-use hispasms\ObjectArrayConversionRule;
+use hispaSMS\Models;
+use hispaSMS\ObjectArrayConversionRule;
 
 class Countries extends AbstractObject {
 
@@ -16,8 +16,8 @@ class Countries extends AbstractObject {
 }
 
 Models::register(
-        'hispasms\models\Countries',
-        new ObjectArrayConversionRule('hispasms\models\Country', 'countries')
+        'hispaSMS\models\Countries',
+        new ObjectArrayConversionRule('hispaSMS\models\Country', 'countries')
 );
 
 ?>

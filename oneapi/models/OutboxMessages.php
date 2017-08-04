@@ -1,9 +1,9 @@
 <?php
 
-namespace hispasms\models;
+namespace hispaSMS\models;
 
-use hispasms\Models;
-use hispasms\ObjectArrayConversionRule;
+use hispaSMS\Models;
+use hispaSMS\ObjectArrayConversionRule;
 
 class OutboxMessages extends AbstractObject
 {
@@ -26,8 +26,8 @@ class OutboxMessages extends AbstractObject
 }
 
 Models::register(
-    'hispasms\models\OutboxMessages',
-    new ObjectArrayConversionRule('hispasms\models\OutboxMessage', 'logs')
+    'hispaSMS\models\OutboxMessages',
+    new ObjectArrayConversionRule('hispaSMS\models\OutboxMessage', 'logs')
 );
 
 ?>

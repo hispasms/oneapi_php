@@ -1,8 +1,8 @@
 <?php
 
-namespace hispasms\models;
+namespace hispaSMS\models;
 
-use hispasms\Models;
+use hispaSMS\Models;
 
 class SubscribeToDeliveryNotificationsRequest extends AbstractObject {
 
@@ -18,4 +18,4 @@ class SubscribeToDeliveryNotificationsRequest extends AbstractObject {
 
 }
 
-Models::register('hispasms\models\SubscribeToDeliveryNotificationsRequest');
+Models::register('hispaSMS\models\SubscribeToDeliveryNotificationsRequest');

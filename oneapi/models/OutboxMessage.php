@@ -1,9 +1,9 @@
 <?php
 
-namespace hispasms\models;
+namespace hispaSMS\models;
 
-use hispasms\Models;
-use hispasms\SubObjectConversionRule;
+use hispaSMS\Models;
+use hispaSMS\SubObjectConversionRule;
 
 class OutboxMessage extends AbstractObject {
 
@@ -27,11 +27,11 @@ class OutboxMessage extends AbstractObject {
 
 }
 Models::register(
-    'hispasms\models\OutboxMessage',
+    'hispaSMS\models\OutboxMessage',
     array(
-        new SubObjectConversionRule('hispasms\models\Status', 'status'), 
-        new SubObjectConversionRule('hispasms\models\Network', 'destinationNetwork'),
-        new SubObjectConversionRule('hispasms\models\Price', 'pricePerMessage')
+        new SubObjectConversionRule('hispaSMS\models\Status', 'status'), 
+        new SubObjectConversionRule('hispaSMS\models\Network', 'destinationNetwork'),
+        new SubObjectConversionRule('hispaSMS\models\Price', 'pricePerMessage')
     )
 );
 

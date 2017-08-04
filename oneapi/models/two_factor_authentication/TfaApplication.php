@@ -1,10 +1,10 @@
 <?php
 
-namespace hispasms\models\two_factor_authentication;
+namespace hispaSMS\models\two_factor_authentication;
 
-use hispasms\Models;
-use hispasms\models\AbstractObject;
-use hispasms\SubObjectConversionRule;
+use hispaSMS\Models;
+use hispaSMS\models\AbstractObject;
+use hispaSMS\SubObjectConversionRule;
 
 class TfaApplication extends AbstractObject {
 
@@ -20,8 +20,8 @@ class TfaApplication extends AbstractObject {
 
 }
 
-Models::register('hispasms\models\two_factor_authentication\TfaApplication', array (
-  new SubObjectConversionRule('hispasms\models\two_factor_authentication\TfaApplicationConfiguration', 'configuration')
+Models::register('hispaSMS\models\two_factor_authentication\TfaApplication', array (
+  new SubObjectConversionRule('hispaSMS\models\two_factor_authentication\TfaApplicationConfiguration', 'configuration')
 ));
 
 ?>

@@ -1,8 +1,8 @@
 <?php
 
-namespace hispasms\models;
+namespace hispaSMS\models;
 
-use hispasms\Models;
+use hispaSMS\Models;
 
 class Timezone extends AbstractObject {
     public $id;
@@ -18,6 +18,6 @@ class Timezone extends AbstractObject {
     }
 
 }    
-Models::register('hispasms\models\Timezone');
+Models::register('hispaSMS\models\Timezone');
 
 ?>

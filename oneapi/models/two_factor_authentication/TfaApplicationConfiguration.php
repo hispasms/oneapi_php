@@ -1,9 +1,9 @@
 <?php
 
-namespace hispasms\models\two_factor_authentication;
+namespace hispaSMS\models\two_factor_authentication;
 
-use hispasms\Models;
-use hispasms\models\AbstractObject;
+use hispaSMS\Models;
+use hispaSMS\models\AbstractObject;
 
 class TfaApplicationConfiguration extends AbstractObject {
 
@@ -28,6 +28,6 @@ class TfaApplicationConfiguration extends AbstractObject {
 
 }
 
-Models::register('hispasms\models\two_factor_authentication\TfaApplicationConfiguration');
+Models::register('hispaSMS\models\two_factor_authentication\TfaApplicationConfiguration');
 
 ?>

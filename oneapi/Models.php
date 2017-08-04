@@ -6,11 +6,11 @@
  * Time: 12:27
  */
 
-namespace hispasms;
+namespace hispaSMS;
 
 
 use Exception;
-use hispasms\utils\Logs;
+use hispaSMS\utils\Logs;
 
 class Models {
 

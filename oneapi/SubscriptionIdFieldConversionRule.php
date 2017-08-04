@@ -6,8 +6,8 @@
  * Time: 12:24
  */
 
-namespace hispasms;
-use hispasms\utils\Utils;
+namespace hispaSMS;
+use hispaSMS\utils\Utils;
 
 class SubscriptionIdFieldConversionRule extends ObjectConversionRule {
 

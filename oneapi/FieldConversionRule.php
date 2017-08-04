@@ -6,7 +6,7 @@
  * Time: 12:21
  */
 
-namespace hispasms;
+namespace hispaSMS;
 
 class FieldConversionRule {
 

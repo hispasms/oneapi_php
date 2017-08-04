@@ -6,8 +6,8 @@
  * Time: 12:23
  */
 
-namespace hispasms;
-use hispasms\utils\Utils;
+namespace hispaSMS;
+use hispaSMS\utils\Utils;
 
 class SubObjectConversionRule extends ObjectConversionRule {
 

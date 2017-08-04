@@ -1,10 +1,10 @@
 <?php
 
-namespace hispasms\models;
+namespace hispaSMS\models;
 
 // TODO: Remove this object and use only TerminalRoamingStatus !
-use hispasms\Models;
-use hispasms\SubObjectConversionRule;
+use hispaSMS\Models;
+use hispaSMS\SubObjectConversionRule;
 
 class TerminalRoamingStatusList extends AbstractObject {
 
@@ -17,7 +17,7 @@ class TerminalRoamingStatusList extends AbstractObject {
 }
 
 Models::register(
-        'hispasms\models\TerminalRoamingStatusList',
-        new SubObjectConversionRule('hispasms\models\TerminalRoamingStatus', 'terminalRoamingStatus', 'terminalRoamingStatusList.roaming')
+        'hispaSMS\models\TerminalRoamingStatusList',
+        new SubObjectConversionRule('hispaSMS\models\TerminalRoamingStatus', 'terminalRoamingStatus', 'terminalRoamingStatusList.roaming')
 );
 

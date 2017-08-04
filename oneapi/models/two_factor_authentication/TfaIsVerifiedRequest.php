@@ -1,9 +1,9 @@
 <?php
 
-namespace hispasms\models\two_factor_authentication;
+namespace hispaSMS\models\two_factor_authentication;
 
-use hispasms\Models;
-use hispasms\models\AbstractObject;
+use hispaSMS\Models;
+use hispaSMS\models\AbstractObject;
 
 class TfaIsVerifiedRequest extends AbstractObject {
 
@@ -16,6 +16,6 @@ class TfaIsVerifiedRequest extends AbstractObject {
 
 }
 
-Models::register('hispasms\models\two_factor_authentication\TfaIsVerifiedRequest');
+Models::register('hispaSMS\models\two_factor_authentication\TfaIsVerifiedRequest');
 
 ?>

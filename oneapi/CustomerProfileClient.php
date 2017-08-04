@@ -6,10 +6,10 @@
  * Time: 12:28 PM
  */
 
-namespace hispasms;
+namespace hispaSMS;
 
 
-use hispasms\utils\Utils;
+use hispaSMS\utils\Utils;
 
 class CustomerProfileClient extends AbstractOneApiClient {
 
@@ -18,15 +18,15 @@ class CustomerProfileClient extends AbstractOneApiClient {
     }
 
     public function getAccountBalance() {
-        $restPath = $this->getRestUrl('/restapi/1/customerProfile/balance');
+        $restPath = $this->getRestUrl('/1/customerProfile/balance');
 
         list($isSuccess, $content) = $this->executeGET($restPath);
 
-        return $this->createFromJSON('hispasms\models\AccountBalance', $content, !$isSuccess);
+        return $this->createFromJSON('hispaSMS\models\AccountBalance', $content, !$isSuccess);
     }
 
     public function logout() {
-        $restPath = '/restapi/1/customerProfile/logout';
+        $restPath = '/1/customerProfile/logout';
 
         list($isSuccess, $content) = $this->executePOST($this->getRestUrl($restPath));
         $this->oneApiAuthentication = null;
@@ -36,7 +36,7 @@ class CustomerProfileClient extends AbstractOneApiClient {
 
     // TODO(TK)
     public function verifyUser($verificationCode='') {
-        $restPath = '/restapi/1/customerProfile/verify';
+        $restPath = '/1/customerProfile/verify';
 
         // reset current auth
         list($isSuccess, $content) = $this->executePOST(
@@ -55,7 +55,7 @@ class CustomerProfileClient extends AbstractOneApiClient {
 
     // TODO(TK)
     public function signup($customerProfile, $password, $captchaId, $captchaAnswer) {
-        $restPath = '/restapi/1/customerProfile/signup';
+        $restPath = '/1/customerProfile/signup';
 
         $params = array(
             'username' => $customerProfile->username,
@@ -81,7 +81,7 @@ class CustomerProfileClient extends AbstractOneApiClient {
 
     // TODO(TK)
     public function checkUsername($uname) {
-        $restPath = '/restapi/1/customerProfile/username/check';
+        $restPath = '/1/customerProfile/username/check';
 
         list($isSuccess, $content) = $this->executeGET(
             $this->getRestUrl($restPath), Array(
@@ -97,11 +97,11 @@ class CustomerProfileClient extends AbstractOneApiClient {
      */
     public function getCustomerProfile($id = null) {
         $restUrl = $this->getRestUrl(
-            $id == null ? '/restapi/1/customerProfile' : '/restapi/1/customerProfile/{id}', Array('id' => $id)
+            $id == null ? '/1/customerProfile' : '/1/customerProfile/{id}', Array('id' => $id)
         );
         list($isSuccess, $content) = $this->executeGET($restUrl);
 
-        return $this->createFromJSON('hispasms\models\CustomerProfile', $content, !$isSuccess);
+        return $this->createFromJSON('hispaSMS\models\CustomerProfile', $content, !$isSuccess);
     }
 
     /**
@@ -109,7 +109,7 @@ class CustomerProfileClient extends AbstractOneApiClient {
      */
     // TODO(TK)
     public function updateCustomerProfile($customerProfile) {
-        $restUrl = $this->getRestUrl('/restapi/1/customerProfile');
+        $restUrl = $this->getRestUrl('/1/customerProfile');
         list($isSuccess, $content) = $this->executeGET($restUrl, Array(
             'id' => $customerProfile->id,
             'username' => $customerProfile->username,

@@ -1,9 +1,9 @@
 <?php
 
-namespace hispasms\models;
+namespace hispaSMS\models;
 
-use hispasms\Models;
-use hispasms\SubObjectConversionRule;
+use hispaSMS\Models;
+use hispaSMS\SubObjectConversionRule;
 
 class TerminalRoamingStatus extends AbstractObject {
 
@@ -22,10 +22,10 @@ class TerminalRoamingStatus extends AbstractObject {
 }
 
 Models::register(
-        'hispasms\models\TerminalRoamingStatus',
+        'hispaSMS\models\TerminalRoamingStatus',
         array(
-                new SubObjectConversionRule('hispasms\models\ServingMccMnc', 'servingMccMnc'),
-                new SubObjectConversionRule('hispasms\models\TerminalRoamingExtendedData', 'extendedData'),
+                new SubObjectConversionRule('hispaSMS\models\ServingMccMnc', 'servingMccMnc'),
+                new SubObjectConversionRule('hispaSMS\models\TerminalRoamingExtendedData', 'extendedData'),
         )
 );
 

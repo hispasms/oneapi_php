@@ -1,9 +1,9 @@
 <?php
 
-namespace hispasms\models;
-use hispasms\ObjectConversionRule;
-use hispasms\Models;
-use hispasms\utils\Utils;
+namespace hispaSMS\models;
+use hispaSMS\ObjectConversionRule;
+use hispaSMS\Models;
+use hispaSMS\utils\Utils;
 
 /**
  * Every client has a instance of this class that contains the basic 
@@ -51,8 +51,8 @@ class OneApiAuthentication extends AbstractObject
     }
 
 Models::register(
-    'hispasms\models\OneApiAuthentication',
-    new ObjectConversionRule('hispasms\models\__convert_ib_auth_from_json')
+    'hispaSMS\models\OneApiAuthentication',
+    new ObjectConversionRule('hispaSMS\models\__convert_ib_auth_from_json')
 );
 
 ?>

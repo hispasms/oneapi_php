@@ -1,10 +1,10 @@
 <?php
 
-namespace hispasms\models;
+namespace hispaSMS\models;
 
-use hispasms\Models;
-use hispasms\SubFieldConversionRule;
-use hispasms\SubObjectConversionRule;
+use hispaSMS\Models;
+use hispaSMS\SubFieldConversionRule;
+use hispaSMS\SubObjectConversionRule;
 
 class TerminalRoamingStatusNotification extends AbstractObject {
 
@@ -18,9 +18,9 @@ class TerminalRoamingStatusNotification extends AbstractObject {
 }
 
 Models::register(
-        'hispasms\models\TerminalRoamingStatusNotification',
+        'hispaSMS\models\TerminalRoamingStatusNotification',
         array(
-            new SubObjectConversionRule('hispasms\models\TerminalRoamingStatus', 'terminalRoamingStatus', 'terminalRoamingStatusList.roaming'),
+            new SubObjectConversionRule('hispaSMS\models\TerminalRoamingStatus', 'terminalRoamingStatus', 'terminalRoamingStatusList.roaming'),
             new SubFieldConversionRule('callbackData', 'terminalRoamingStatusList.roaming.callbackData')
         )
 );

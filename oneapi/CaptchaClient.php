@@ -6,9 +6,9 @@
  * Time: 12:27 PM
  */
 
-namespace hispasms;
+namespace hispaSMS;
 
-use hispasms\models\Captcha;
+use hispaSMS\models\Captcha;
 
 class CaptchaClient extends AbstractOneApiClient {
 
@@ -21,7 +21,7 @@ class CaptchaClient extends AbstractOneApiClient {
      */
     // TODO(TK)
     public function getCaptcha($width=200,$height=50,$imageFormat="png") {
-        $restUrl = $this->getRestUrl('/restapi/1/captcha/generate',Array(
+        $restUrl = $this->getRestUrl('/1/captcha/generate',Array(
             'width' => $width,
             'height' => $height,
             'imageFormat' => $imageFormat

@@ -1,8 +1,8 @@
 <?php
 
-namespace hispasms\models;
+namespace hispaSMS\models;
 
-use hispasms\Models;
+use hispaSMS\Models;
 
 class Hlr extends AbstractObject {
 
@@ -15,6 +15,6 @@ class Hlr extends AbstractObject {
     }
 
 }    
-Models::register('hispasms\models\Hlr');
+Models::register('hispaSMS\models\Hlr');
 
 ?>

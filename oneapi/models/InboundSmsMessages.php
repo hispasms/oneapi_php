@@ -1,11 +1,11 @@
 <?php
 
-namespace hispasms\models;
+namespace hispaSMS\models;
 
-use hispasms\Conversions;
-use hispasms\Models;
-use hispasms\ObjectConversionRule;
-use hispasms\utils\Utils;
+use hispaSMS\Conversions;
+use hispaSMS\Models;
+use hispaSMS\ObjectConversionRule;
+use hispaSMS\utils\Utils;
 
 class InboundSmsMessages extends AbstractObject {
 
@@ -26,7 +26,7 @@ function __convert_inbound_sms_messages($object, $jsonData) {
     $messages = Utils::getArrayValue($jsonData, 'inboundSMSMessageList.inboundSMSMessage', array());
     $object->inboundSMSMessage = array();
     foreach($messages as $message) {
-        $object->inboundSMSMessage[] = Conversions::createFromJSON('hispasms\models\InboundSmsMessage', $message, false);
+        $object->inboundSMSMessage[] = Conversions::createFromJSON('hispaSMS\models\InboundSmsMessage', $message, false);
     }
     $object->numberOfMessagesInThisBatch = Utils::getArrayValue($jsonData, 'inboundSMSMessageList.numberOfMessagesInThisBatch', 0);
     $object->totalNumberOfPendingMessages = Utils::getArrayValue($jsonData, 'inboundSMSMessageList.totalNumberOfPendingMessages', 0);
@@ -34,8 +34,8 @@ function __convert_inbound_sms_messages($object, $jsonData) {
 }
 
 Models::register(
-        'hispasms\models\InboundSmsMessages',
-        new ObjectConversionRule('hispasms\models\__convert_inbound_sms_messages')
+        'hispaSMS\models\InboundSmsMessages',
+        new ObjectConversionRule('hispaSMS\models\__convert_inbound_sms_messages')
 );
 
 ?>

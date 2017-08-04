@@ -6,9 +6,9 @@
  * Time: 12:28 PM
  */
 
-namespace hispasms;
+namespace hispaSMS;
 
-use hispasms\models\Timezones;
+use hispaSMS\models\Timezones;
 
 class TimeZoneClient extends AbstractOneApiClient {
 
@@ -22,7 +22,7 @@ class TimeZoneClient extends AbstractOneApiClient {
     // TODO(TK)
     public function getTimezones($id = null) {
         $restUrl = $this->getRestUrl(
-            $id == null ? '/restapi/1/timezones' : '/restapi/1/timezones/{id}', Array('id' => $id)
+            $id == null ? '/1/timezones' : '/1/timezones/{id}', Array('id' => $id)
         );
         list($isSuccess, $content) = $this->executeGET($restUrl);
 

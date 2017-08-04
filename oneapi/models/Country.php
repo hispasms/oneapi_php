@@ -1,8 +1,8 @@
 <?php
 
-namespace hispasms\models;
+namespace hispaSMS\models;
 
-use hispasms\Models;
+use hispaSMS\Models;
 
 class Country  extends AbstractObject {
     public $id;
@@ -16,7 +16,7 @@ class Country  extends AbstractObject {
     }
 
 }    
-Models::register('hispasms\models\Country');
+Models::register('hispaSMS\models\Country');
 
 
 ?>

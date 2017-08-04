@@ -1,11 +1,11 @@
 <?php
 
-namespace hispasms\models;
+namespace hispaSMS\models;
 
-use hispasms\Conversions;
-use hispasms\Models;
-use hispasms\utils\Logs;
-use hispasms\models\SmsException;
+use hispaSMS\Conversions;
+use hispaSMS\Models;
+use hispaSMS\utils\Logs;
+use hispaSMS\models\SmsException;
 
 class Language {
     public $languageCode;
@@ -22,7 +22,7 @@ class Language {
     }
 
 }
-Models::register('hispasms\models\Language');
+Models::register('hispaSMS\models\Language');
 
 
 ?>

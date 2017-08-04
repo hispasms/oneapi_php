@@ -1,7 +1,7 @@
 <?php
 
-namespace hispasms\models;
-use hispasms\Models;
+namespace hispaSMS\models;
+use hispaSMS\Models;
 
 /**
  * Social Invite request object.
@@ -20,6 +20,6 @@ class SocialInviteRequest extends AbstractObject {
 
 }
 
-Models::register('hispasms\models\SocialInviteRequest');
+Models::register('hispaSMS\models\SocialInviteRequest');
 
 ?>

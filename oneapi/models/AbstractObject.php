@@ -1,10 +1,10 @@
 <?php
 
-namespace hispasms\models;
+namespace hispaSMS\models;
 
-use hispasms\Conversions;
-use hispasms\models\SmsException;
-use hispasms\utils\Logs;
+use hispaSMS\Conversions;
+use hispaSMS\models\SmsException;
+use hispaSMS\utils\Logs;
 
 class AbstractObject {
 

@@ -1,9 +1,9 @@
 <?php
 
-namespace hispasms\models;
+namespace hispaSMS\models;
 
-use hispasms\Models;
-use hispasms\ObjectArrayConversionRule;
+use hispaSMS\Models;
+use hispaSMS\ObjectArrayConversionRule;
 
 class Timezones extends AbstractObject {
 
@@ -16,8 +16,8 @@ class Timezones extends AbstractObject {
 }
 
 Models::register(
-        'hispasms\models\Timezones',
-        new ObjectArrayConversionRule('hispasms\models\Timezone', 'timeZones')
+        'hispaSMS\models\Timezones',
+        new ObjectArrayConversionRule('hispaSMS\models\Timezone', 'timeZones')
 );
 
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace hispasms\models;
+namespace hispaSMS\models;
 
-use hispasms\Models;
+use hispaSMS\Models;
 
 class ServingMccMnc extends AbstractObject {
 
@@ -15,5 +15,5 @@ class ServingMccMnc extends AbstractObject {
 
 }
 
-Models::register('hispasms\models\ServingMccMnc');
+Models::register('hispaSMS\models\ServingMccMnc');
 

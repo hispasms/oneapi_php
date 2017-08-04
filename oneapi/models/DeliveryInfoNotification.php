@@ -1,10 +1,10 @@
 <?php
 
-namespace hispasms\models;
+namespace hispaSMS\models;
 
-use hispasms\Models;
-use hispasms\SubFieldConversionRule;
-use hispasms\SubObjectConversionRule;
+use hispaSMS\Models;
+use hispaSMS\SubFieldConversionRule;
+use hispaSMS\SubObjectConversionRule;
 
 class DeliveryInfoNotification extends AbstractObject {
 
@@ -18,9 +18,9 @@ class DeliveryInfoNotification extends AbstractObject {
 }
 
 Models::register(
-        'hispasms\models\DeliveryInfoNotification',
+        'hispaSMS\models\DeliveryInfoNotification',
         array(
-            new SubObjectConversionRule('hispasms\models\DeliveryInfo', 'deliveryInfo', 'deliveryInfoNotification.deliveryInfo'),
+            new SubObjectConversionRule('hispaSMS\models\DeliveryInfo', 'deliveryInfo', 'deliveryInfoNotification.deliveryInfo'),
             new SubFieldConversionRule('callbackData', 'deliveryInfoNotification.callbackData')
         )
 );

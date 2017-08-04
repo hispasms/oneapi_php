@@ -1,8 +1,8 @@
 <?php
 
-namespace hispasms\models;
-use hispasms\Models;
-use hispasms\ObjectArrayConversionRule;
+namespace hispaSMS\models;
+use hispaSMS\Models;
+use hispaSMS\ObjectArrayConversionRule;
 
 /**
  * Description of Encodings
@@ -20,8 +20,8 @@ class Encodings extends AbstractObject {
 }
 
 Models::register(
-        'hispasms\models\Encodings',
-        new ObjectArrayConversionRule('hispasms\models\Encoding', 'encodings')
+        'hispaSMS\models\Encodings',
+        new ObjectArrayConversionRule('hispaSMS\models\Encoding', 'encodings')
 );
         
 

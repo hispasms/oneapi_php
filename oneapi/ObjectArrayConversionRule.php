@@ -6,10 +6,10 @@
  * Time: 12:26
  */
 
-namespace hispasms;
+namespace hispaSMS;
 
-use hispasms\utils\Logs;
-use hispasms\utils\Utils;
+use hispaSMS\utils\Logs;
+use hispaSMS\utils\Utils;
 
 class ObjectArrayConversionRule extends ObjectConversionRule {
 

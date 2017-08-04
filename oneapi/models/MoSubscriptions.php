@@ -1,9 +1,9 @@
 <?php
 
-namespace hispasms\models;
+namespace hispaSMS\models;
 
-use hispasms\Models;
-use hispasms\ObjectArrayConversionRule;
+use hispaSMS\Models;
+use hispaSMS\ObjectArrayConversionRule;
 
 class MoSubscriptions extends AbstractObject {
 
@@ -16,8 +16,8 @@ class MoSubscriptions extends AbstractObject {
 }
 
 Models::register(
-        'hispasms\models\MoSubscriptions',
-        new ObjectArrayConversionRule('hispasms\models\MoSubscription', 'subscriptions')
+        'hispaSMS\models\MoSubscriptions',
+        new ObjectArrayConversionRule('hispaSMS\models\MoSubscription', 'subscriptions')
 );
 
 ?>

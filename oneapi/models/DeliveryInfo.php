@@ -1,8 +1,8 @@
 <?php
 
-namespace hispasms\models;
+namespace hispaSMS\models;
 
-use hispasms\Models;
+use hispaSMS\Models;
 
 class DeliveryInfo extends AbstractObject {
 
@@ -17,4 +17,4 @@ class DeliveryInfo extends AbstractObject {
 
 }
 
-Models::register('hispasms\models\DeliveryInfo');
+Models::register('hispaSMS\models\DeliveryInfo');

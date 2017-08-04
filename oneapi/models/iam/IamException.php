@@ -1,10 +1,10 @@
 <?php
 
-namespace hispasms\models\iam;
+namespace hispaSMS\models\iam;
 
-use hispasms\Models;
-use hispasms\models\AbstractObject;
-use hispasms\SubObjectConversionRule;
+use hispaSMS\Models;
+use hispaSMS\models\AbstractObject;
+use hispaSMS\SubObjectConversionRule;
 
 class IamException extends AbstractObject {
 
@@ -16,8 +16,8 @@ class IamException extends AbstractObject {
 
 }
 
-Models::register('hispasms\models\iam\IamException', array (
-  new SubObjectConversionRule('hispasms\models\iam\IamRequestError', 'requestError')
+Models::register('hispaSMS\models\iam\IamException', array (
+  new SubObjectConversionRule('hispaSMS\models\iam\IamRequestError', 'requestError')
 ));
 
 ?>

@@ -6,7 +6,7 @@
  * Time: 12:26 PM
  */
 
-namespace hispasms;
+namespace hispaSMS;
 
 
 class DataConnectionProfileClient extends AbstractOneApiClient {
@@ -19,14 +19,14 @@ class DataConnectionProfileClient extends AbstractOneApiClient {
         if($json === null)
             $json = file_get_contents("php://input");
 
-        return Conversions::createFromJSON('hispasms\models\TerminalRoamingStatusNotification', $json);
+        return Conversions::createFromJSON('hispaSMS\models\TerminalRoamingStatusNotification', $json);
     }
 
     /**
      * Retrieve asynchronously the customer’s roaming status for a single network-connected mobile device  (HLR)
      */
     public function retrieveRoamingStatus($address, $notifyURL=null) {
-        $restUrl = $this->getRestUrl('/restapi/1/terminalstatus/queries/roamingStatus');
+        $restUrl = $this->getRestUrl('/1/terminalstatus/queries/roamingStatus');
 
         $params = array(
             'address' => $address,
@@ -46,9 +46,9 @@ class DataConnectionProfileClient extends AbstractOneApiClient {
         list($isSuccess, $content) = $this->executeGET($restUrl, $params);
 
         if($notifyURL)
-            return $this->createFromJSON('hispasms\models\GenericObject', null, !$isSuccess);
+            return $this->createFromJSON('hispaSMS\models\GenericObject', null, !$isSuccess);
         else
-            return $this->createFromJSON('hispasms\models\TerminalRoamingStatus', $content['roaming'], !$isSuccess);
+            return $this->createFromJSON('hispaSMS\models\TerminalRoamingStatus', $content['roaming'], !$isSuccess);
     }
 
 }

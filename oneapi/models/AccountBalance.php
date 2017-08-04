@@ -1,9 +1,9 @@
 <?php
 
-namespace hispasms\models;
+namespace hispaSMS\models;
 
-use hispasms\Models;
-use hispasms\SubObjectConversionRule;
+use hispaSMS\Models;
+use hispaSMS\SubObjectConversionRule;
 
 class AccountBalance extends AbstractObject {
 
@@ -18,6 +18,6 @@ class AccountBalance extends AbstractObject {
 }
 
 Models::register(
-        'hispasms\models\AccountBalance',
-        new SubObjectConversionRule('hispasms\models\Currency', 'currency')
+        'hispaSMS\models\AccountBalance',
+        new SubObjectConversionRule('hispaSMS\models\Currency', 'currency')
 );

@@ -1,6 +1,6 @@
 <?php
 
-namespace hispasms\utils;
+namespace hispaSMS\utils;
 
 use Exception;
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace hispasms\models;
-use hispasms\Models;
-use hispasms\SubscriptionIdFieldConversionRule;
+namespace hispaSMS\models;
+use hispaSMS\Models;
+use hispaSMS\SubscriptionIdFieldConversionRule;
 
 /**
  * Resulting object on message (HLR/LBS) send.
@@ -22,7 +22,7 @@ class ResourceReference extends AbstractObject {
 }
 
 Models::register(
-    'hispasms\models\ResourceReference',
+    'hispaSMS\models\ResourceReference',
     new SubscriptionIdFieldConversionRule('clientCorrelator', 'resourceReference.resourceURL')
 );
 

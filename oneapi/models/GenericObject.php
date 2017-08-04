@@ -1,7 +1,7 @@
 <?php
 
-namespace hispasms\models;
-use hispasms\Models;
+namespace hispaSMS\models;
+use hispaSMS\Models;
 
 /** Generic object to be used for API methods that return without body. */
 class GenericObject extends AbstractObject {
@@ -12,5 +12,5 @@ class GenericObject extends AbstractObject {
 
 }
 
-Models::register('hispasms\models\GenericObject');
+Models::register('hispaSMS\models\GenericObject');
 ?>

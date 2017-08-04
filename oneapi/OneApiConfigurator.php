@@ -6,7 +6,7 @@
  * Time: 12:21 PM
  */
 
-namespace hispasms;
+namespace hispaSMS;
 
 /**
  * Utility handler class to store username/password.

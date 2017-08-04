@@ -6,7 +6,7 @@
  * Time: 12:25 PM
  */
 
-namespace hispasms;
+namespace hispaSMS;
 
 /**
  * Warning, temporary implementation, the API may change!
@@ -24,12 +24,12 @@ class UssdClient extends AbstractOneApiClient {
         );
 
         list($isSuccess, $content) = $this->executePOST(
-            $this->getRestUrl('/restapi/1/ussd/outbound'),
+            $this->getRestUrl('/1/ussd/outbound'),
             $params,
             'application/json'
         );
 
-        return $this->createFromJSON('hispasms\models\InboundSmsMessage', $content, !$isSuccess);
+        return $this->createFromJSON('hispaSMS\models\InboundSmsMessage', $content, !$isSuccess);
     }
 
     public function stopSession($address, $message) {
@@ -40,7 +40,7 @@ class UssdClient extends AbstractOneApiClient {
         );
 
         list($isSuccess, $content) = $this->executePOST(
-            $this->getRestUrl('/restapi/1/ussd/outbound'),
+            $this->getRestUrl('/1/ussd/outbound'),
             $params,
             'application/json'
         );

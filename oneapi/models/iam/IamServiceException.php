@@ -1,9 +1,9 @@
 <?php
 
-namespace hispasms\models\iam;
+namespace hispaSMS\models\iam;
 
-use hispasms\Models;
-use hispasms\models\AbstractObject;
+use hispaSMS\Models;
+use hispaSMS\models\AbstractObject;
 
 class IamServiceException extends AbstractObject {
 
@@ -17,6 +17,6 @@ class IamServiceException extends AbstractObject {
 
 }
 
-Models::register('hispasms\models\iam\IamServiceException');
+Models::register('hispaSMS\models\iam\IamServiceException');
 
 ?>

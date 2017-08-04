@@ -1,8 +1,8 @@
 <?php
 
-namespace hispasms\models;
-use hispasms\Models;
-use hispasms\SubObjectConversionRule;
+namespace hispaSMS\models;
+use hispaSMS\Models;
+use hispaSMS\SubObjectConversionRule;
 
 /**
  * Social Invite response object.
@@ -16,8 +16,8 @@ class SocialInviteResponse extends AbstractObject {
   }
 }
 
-Models::register('hispasms\models\SocialInviteResponse', array (
-  new SubObjectConversionRule('hispasms\models\SISendSmsResponse', 'sendSmsResponse')
+Models::register('hispaSMS\models\SocialInviteResponse', array (
+  new SubObjectConversionRule('hispaSMS\models\SISendSmsResponse', 'sendSmsResponse')
 ));
 
 ?>

@@ -1,12 +1,12 @@
 <?php
 
-namespace hispasms\models;
+namespace hispaSMS\models;
 
 // Example:
-// {"deliveryReceiptSubscription":{"callbackReference":{"callbackData":null,"notifyURL":"http://192.168.10.111/save_requests"},"resourceURL":"https://oneapi.hispasms.com/restapi/1/smsmessaging/outbound/subscriptions/q1id6ksfc8"}}
+// {"deliveryReceiptSubscription":{"callbackReference":{"callbackData":null,"notifyURL":"http://192.168.10.111/save_requests"},"resourceURL":"http://oneapi.hispasms.com/1/smsmessaging/outbound/subscriptions/q1id6ksfc8"}}
 
-use hispasms\Models;
-use hispasms\SubFieldConversionRule;
+use hispaSMS\Models;
+use hispaSMS\SubFieldConversionRule;
 
 class DeliveryReportSubscription extends AbstractObject {
 
@@ -19,6 +19,6 @@ class DeliveryReportSubscription extends AbstractObject {
 }
 
 Models::register(
-        'hispasms\models\DeliveryReportSubscription',
+        'hispaSMS\models\DeliveryReportSubscription',
         new SubFieldConversionRule('subscriptionId', 'deliveryReceiptSubscription.resourceURL')
 );

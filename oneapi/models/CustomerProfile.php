@@ -1,8 +1,8 @@
 <?php
 
-namespace hispasms\models;
+namespace hispaSMS\models;
 
-use hispasms\Models;
+use hispaSMS\Models;
 
 class CustomerProfile extends AbstractObject {
 
@@ -30,6 +30,6 @@ class CustomerProfile extends AbstractObject {
 
 }
 	
-Models::register('hispasms\models\CustomerProfile');
+Models::register('hispaSMS\models\CustomerProfile');
 
 ?>

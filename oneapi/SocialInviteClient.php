@@ -6,7 +6,7 @@
  * Time: 12:29 PM
  */
 
-namespace hispasms;
+namespace hispaSMS;
 
 use stdClass;
 
@@ -27,7 +27,7 @@ class SocialInviteClient extends AbstractOneApiClient {
      * Send social invitation
      */
     public function sendInvite($socialInviteRequest, $socialInviteAppSecret) {
-        $restUrl = $this->getRestUrl('/restapi/1/social-invite/invitation');
+        $restUrl = $this->getRestUrl('/1/social-invite/invitation');
 
         $sender = $this->getOrCreateSenderId($socialInviteRequest->senderAddress);
 
@@ -50,6 +50,6 @@ class SocialInviteClient extends AbstractOneApiClient {
             $restUrl, $params, 'application/json', $socialInviteAppSecret
         );
 
-        return $this->createFromJSON('hispasms\models\SocialInviteResponse', $content, !$isSuccess);
+        return $this->createFromJSON('hispaSMS\models\SocialInviteResponse', $content, !$isSuccess);
     }
 }

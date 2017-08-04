@@ -1,8 +1,8 @@
 <?php
 
-namespace hispasms\models;
+namespace hispaSMS\models;
 
-use hispasms\Models;
+use hispaSMS\Models;
 
 class Status extends AbstractObject {
     public $id;
@@ -13,5 +13,5 @@ class Status extends AbstractObject {
         parent::__construct($array, $success);
     }
 }
-Models::register('hispasms\models\Status');
+Models::register('hispaSMS\models\Status');
 ?>

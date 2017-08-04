@@ -6,7 +6,7 @@
  * Time: 12:18
  */
 
-namespace hispasms;
+namespace hispaSMS;
 
 use Exception;
 
@@ -37,7 +37,7 @@ class Conversions {
             $array = array();
 
         if($isError) {
-            $exception = self::createFromJSON('hispasms\models\SmsException', $json, false);
+            $exception = self::createFromJSON('hispaSMS\models\SmsException', $json, false);
             $model->exception = $exception;
             return $model;
         }
