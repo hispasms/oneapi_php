@@ -1,6 +1,6 @@
 <?php
 
-use hispasms\UssdClient;
+use hispaSMS\UssdClient;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 

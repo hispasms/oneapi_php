@@ -5,7 +5,7 @@
  * request. This is the script to process this request.
  */
 
-use hispasms\SmsClient;
+use hispaSMS\SmsClient;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 

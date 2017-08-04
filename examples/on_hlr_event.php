@@ -1,6 +1,6 @@
 <?php
 
-use hispasms\DataConnectionProfileClient;
+use hispaSMS\DataConnectionProfileClient;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 

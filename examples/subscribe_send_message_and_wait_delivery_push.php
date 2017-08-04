@@ -1,8 +1,8 @@
 <?php
 
-use hispasms\models\SubscribeToDeliveryNotificationsRequest;
-use hispasms\SmsClient;
-use hispasms\utils\Logs;
+use hispaSMS\models\SubscribeToDeliveryNotificationsRequest;
+use hispaSMS\SmsClient;
+use hispaSMS\utils\Logs;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 

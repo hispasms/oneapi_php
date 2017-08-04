@@ -7,9 +7,9 @@
  * Use ../examples.php to test this file
  */
 
-use hispasms\models\two_factor_authentication\TfaRequest;
-use hispasms\models\two_factor_authentication\TfaVerifyPinRequest;
-use hispasms\TwoFactorAuthenticationClient;
+use hispaSMS\models\two_factor_authentication\TfaRequest;
+use hispaSMS\models\two_factor_authentication\TfaVerifyPinRequest;
+use hispaSMS\TwoFactorAuthenticationClient;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
@@ -76,7 +76,7 @@ try {
         echo "Verification attempts remaining: ", $verificationResponse->attemptsRemaining, "\n";
         if ($verificationResponse->attemptsRemaining <= 0) break;
       } else {
-        echo "You successfully finished HispaSMS Two Factor Authentication process for ", $tfaRequest->phoneNumber, "\n";
+        echo "You successfully finished hispaSMS Two Factor Authentication process for ", $tfaRequest->phoneNumber, "\n";
       }
     }
   } else {

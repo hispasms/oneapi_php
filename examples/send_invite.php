@@ -6,9 +6,9 @@
  *
  * Use ../examples.php to test this file
  */
-use hispasms\models\SocialInviteRequest;
-use hispasms\SmsClient;
-use hispasms\SocialInviteClient;
+use hispaSMS\models\SocialInviteRequest;
+use hispaSMS\SmsClient;
+use hispaSMS\SocialInviteClient;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 

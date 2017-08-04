@@ -1,6 +1,6 @@
 <?php
 
-use hispasms\CustomerProfileClient;
+use hispaSMS\CustomerProfileClient;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 

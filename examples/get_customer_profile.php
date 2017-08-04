@@ -1,7 +1,7 @@
 <?php
 
-use hispasms\CustomerProfileClient;
-use hispasms\utils\Logs;
+use hispaSMS\CustomerProfileClient;
+use hispaSMS\utils\Logs;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 

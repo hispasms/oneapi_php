@@ -1,7 +1,7 @@
 <?php
 
-use hispasms\SmsClient;
-use hispasms\utils\OneApiDateTime;
+use hispaSMS\SmsClient;
+use hispaSMS\utils\OneApiDateTime;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 

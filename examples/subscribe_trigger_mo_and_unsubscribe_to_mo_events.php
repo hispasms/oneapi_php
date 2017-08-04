@@ -1,8 +1,8 @@
 <?php
 
-use hispasms\models\MoSubscription;
-use hispasms\models\SMSRequest;
-use hispasms\SmsClient;
+use hispaSMS\models\MoSubscription;
+use hispaSMS\models\SMSRequest;
+use hispaSMS\SmsClient;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 

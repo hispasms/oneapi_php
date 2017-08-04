@@ -7,9 +7,9 @@
  * Use ../examples.php to test this file
  */
 
-use hispasms\models\SMSRequest;
-use hispasms\SmsClient;
-use hispasms\utils\Logs;
+use hispaSMS\models\SMSRequest;
+use hispaSMS\SmsClient;
+use hispaSMS\utils\Logs;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
