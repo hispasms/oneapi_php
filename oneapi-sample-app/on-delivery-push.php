@@ -1,6 +1,6 @@
 <?php
 
-use hispasms\SmsClient;
+use hispaSMS\SmsClient;
 
 require_once 'app.php';
 

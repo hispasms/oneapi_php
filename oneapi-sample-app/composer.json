@@ -1,5 +1,5 @@
 {
     "require": {
-            "hispasms/oneapi": "dev-master"
+            "hispaSMS/oneapi": "dev-master"
     }
 }

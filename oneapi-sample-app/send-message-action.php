@@ -1,7 +1,7 @@
 <?php
 
-use hispasms\models\SMSRequest;
-use hispasms\SmsClient;
+use hispaSMS\models\SMSRequest;
+use hispaSMS\SmsClient;
 
 require_once 'app.php';
 

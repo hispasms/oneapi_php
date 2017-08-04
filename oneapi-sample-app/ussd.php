@@ -1,6 +1,6 @@
 <?php
 
-use hispasms\UssdClient;
+use hispaSMS\UssdClient;
 
 require_once 'app.php';
 
@@ -10,7 +10,7 @@ if(array_key_exists('gsm', $_REQUEST)) {
 
     $response = null;
     while($response != '1') {
-        $result = $ussdClient->sendMessage($gsm, "You favourite mobile API is\n1. HispaSMS\n2. Other");
+        $result = $ussdClient->sendMessage($gsm, "You favourite mobile API is\n1. Parseco\n2. Other");
         $response = $result->message;
     }
     $ussdClient->stopSession($gsm, "Cool");

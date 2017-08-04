@@ -1,7 +1,7 @@
 <?php
 
 // Include configuration constants:
-use hispasms\utils\Logs;
+use hispaSMS\utils\Logs;
 require_once __DIR__ . '/../vendor/autoload.php';
 require_once 'config.php';
 
