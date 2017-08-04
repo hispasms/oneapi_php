@@ -1,7 +1,7 @@
 #OneApi PHP client
 
 
-*Note: For non composer version switch to this [repository](https://github.com/hispasms/oneapi_php_non_composer)*
+*Note: For non composer version switch to this [repository](https://github.com/hispaSMS/oneapi-php-non-composer)*
 
 ##Installation
 
@@ -9,7 +9,7 @@ Add this to your `composer.json` file.
 
     {
         "require": {
-                "hispasms/oneapi": "dev-master"
+                "hispaSMS/oneapi": "dev-master"
         }
     }
 
@@ -19,14 +19,14 @@ First include `autoload.php`  and initialize the messaging client using your use
     
     require_once '<PATH-TO-VENDOR-FOLDER>\autoload.php';
     
-    $smsClient = new \hispasms\SmsClient(USERNAME, PASSWORD);
+    $smsClient = new \hispaSMS\SmsClient(USERNAME, PASSWORD);
 
 
 An exception will be thrown if your *username* and/or `password` are incorrect.
 
 Prepare the message:
 
-    $smsMessage = new \hispasms\models\SMSRequest();
+    $smsMessage = new \hispaSMS\models\SMSRequest();
     $smsMessage->senderAddress = SENDER_ADDRESS;
     $smsMessage->address = DESTINATION_ADDRESS;
     $smsMessage->message = 'Hello world';
@@ -56,7 +56,7 @@ Possible statuses are: **DeliveredToTerminal**, **DeliveryUncertain**, **Deliver
 
 Same as with the standard messaging example, but when preparing your message:
 
-    $smsMessage = new \hispasms\models\SMSRequest();
+    $smsMessage = new \hispaSMS\models\SMSRequest();
     $smsMessage->senderAddress = SENDER_ADDRESS;
     $smsMessage->address = DESTINATION_ADDRESS;
     $smsMessage->message = 'Hello world';
@@ -64,7 +64,7 @@ Same as with the standard messaging example, but when preparing your message:
 
 When the delivery notification is pushed to your server as a HTTP POST request, you must process the body of the message with the following code:
 
-    $result = \hispasms\SmsClient::unserializeDeliveryStatus();
+    $result = \hispaSMS\SmsClient::unserializeDeliveryStatus();
 
     // Process $result here, e.g. just save it to a file:
     $f = fopen(FILE_NAME, 'w');
@@ -81,12 +81,12 @@ When the delivery notification is pushed to your server as a HTTP POST request, 
 
 If you want to send message with special characters, this is how you prepare your message:
 
-    $smsMessage = new \hispasms\models\SMSRequest();
+    $smsMessage = new \hispaSMS\models\SMSRequest();
     $smsMessage->senderAddress = SENDER_ADDRESS;
     $smsMessage->address = DESTINATION_ADDRESS;
     $smsMessage->message = MESSAGE_TEXT;
   
-    $language = new \hispasms\models\Language();
+    $language = new \hispaSMS\models\Language();
 
     //specific language code
     $language->languageCode = LANGUAGE_CODE;
@@ -105,7 +105,7 @@ Currently supported languages (with their language codes) are: `Spanish - "SP"`,
 
 Initialize and login the data connection client:
 
-    $client = new \hispasms\DataConnectionProfileClient(USERNAME, PASSWORD);
+    $client = new \hispaSMS\DataConnectionProfileClient(USERNAME, PASSWORD);
 
 
 Retrieve the roaming status (Number Context):
@@ -133,7 +133,7 @@ Similar to the previous example, but this time you must set the notification url
     // if there is no error the query has been succesfully executed
     if(!$response->isSuccess()) {
         echo 'Error:', $response->exception, "\n";
-        hispasms\utils\Logs::printLogs();
+        hispaSMS\utils\Logs::printLogs();
     }
 
 
@@ -182,7 +182,7 @@ The subscription to receive inbound messages can be set up on our site.
 When the inbound message notification is pushed to your server as a HTTP POST request, you must process the body of the message with the following code:
 
     // returns a single message not array of messages
-    $inboundMessages = \hispasms\SmsClient::unserializeInboundMessages();
+    $inboundMessages = \hispaSMS\SmsClient::unserializeInboundMessages();
 
     // Process $inboundMessages here, e.g. just save it to a file:
     $f = fopen(FILE_NAME, 'w');
@@ -196,15 +196,15 @@ When the inbound message notification is pushed to your server as a HTTP POST re
 
 ##Social invites sms example
 
-If you have Social Invites application registered and configured ([tutorial](https://dev.hispasms.com/docs/social-invites/)), you can send invitations.
+If you have Social Invites application registered and configured ([tutorial](http://developer.hispaSMS.com/getting-started/tutorials/social-invite)), you can send invitations.
 
 First initialize the social invites client using your username and password:
 
-    $socinv = new \hispasms\SocialInviteClient(USERNAME, PASSWORD);
+    $socinv = new \hispaSMS\SocialInviteClient(USERNAME, PASSWORD);
 
 Prepare the social invitation:
 
-    $siReq = new \hispasms\models\SocialInviteRequest();
+    $siReq = new \hispaSMS\models\SocialInviteRequest();
     $siReq->senderAddress = SENDER_ADDRESS;
     $siReq->recipients = DESTINATION_ADDRESS;
     $siReq->messageKey = SOCIAL_INVITES_MESSAGE_KEY;

@@ -40,5 +40,5 @@ define('TFA_MESSAGE_ID', '');
 //require_once 'examples/send_message_with_nli_and_wait_for_delivery_push.php';
 //require_once 'examples/send_message_and_wait_to_delivery_push.php';
 
-//define('ONEAPI_BASE_URL', 'https://oneapi-test.hispasms.com/');
+//define('ONEAPI_BASE_URL', 'http://oneapi-test.hispasms.com/');
 //require_once 'examples/tfa_auth_and_verify.php';
